@@ -47,7 +47,7 @@ $(function() {
     var charCode = (typeof event.which == "number") ? event.charCode : event.keyCode;
     // Allow non-printable keys
     if (!charCode || charCode == 8 /* Backspace */ ) {
-      alert('backspace charCode:' + charCode);
+      //alert('backspace charCode:' + charCode);
     }
     var typedChar = String.fromCharCode(charCode);
     // Allow numeric characters
