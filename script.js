@@ -48,7 +48,7 @@ $(function() {
     var charCode = (typeof event.which == "number") ? event.charCode : event.keyCode;
     if(event.which == 229) {
     charCode = $(this).val().charCodeAt($(this).val().length-1);
-      alrt(charCode);
+      alert(charCode);
     }
     // Allow non-printable keys
     if (!charCode || charCode == 8 /* Backspace */ ) {
