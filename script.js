@@ -13,7 +13,7 @@ $(function() {
     var toggleType = (inputsuffix == '123' ? 'number' : 'text');
     $("#hiddenInput").attr('type', toggleType);
     originalVal = $("#" + idPrefix).val();
-    $("#hiddenInput").val(originalVal ); 
+    
     $(this).text(toggleText);
     oldLength = 0;
     if ($("#hiddenInput").val() !== undefined) {
@@ -32,7 +32,7 @@ $(function() {
     $("#hiddenInput").attr('type', 'number');
     idPrefix = (this.id).split('-')[0];
     originalVal = $(this).val();
-    $("#hiddenInput").val(originalVal ); 
+   
     oldLength = 0;
     if ($("#hiddenInput").val() !== undefined) {
       oldLength = $("#hiddenInput").val().length;
