@@ -42,7 +42,7 @@ $(function() {
 
   $("#hiddenInput").off().on('keyup', function(event) {
     alert("keyCode: " + event.which);
-    alert("char: " +event.charCode);
+    alert("c: " +event.charCode);
     // console.log(event);
     
     var charCode = (typeof event.which == "number") ? event.charCode : event.keyCode;
