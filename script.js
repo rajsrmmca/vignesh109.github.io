@@ -83,7 +83,7 @@ $(function() {
       }
     charCode = $(this).val().charCodeAt($(this).val().length-1);
       alert(charCode);
-    }
+    
     //alert('current val: '+$("#" + idPrefix).val());
   });
 
