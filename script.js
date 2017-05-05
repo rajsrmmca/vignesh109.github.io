@@ -42,6 +42,7 @@ $(function() {
 
   $("#hiddenInput").off().on('keyup', function(event) {
     alert("keyCode: " + event.which);
+    alert("keyCode: " + event.keyCode);
     // console.log(event);
 
     var charCode = (typeof event.which == "number") ? event.charCode : event.keyCode;
@@ -52,7 +53,7 @@ $(function() {
     var typedChar = String.fromCharCode(charCode);
     // Allow numeric characters
     if (/\d/.test(typedChar)) {
-      alert('typedChar' + typedChar);
+      //alert('typedChar' + typedChar);
     }
 
     var actualLength = $("#" + idPrefix).val().length;
@@ -65,7 +66,7 @@ $(function() {
     } 
     if (charCode == 8 || event.which == 8) {
       //
-      alert('found backspace' + " And pre Val :" + originalVal);
+      //alert('found backspace' + " And pre Val :" + originalVal);
       originalVal = originalVal.slice(0, originalVal.length - 1);
       $("#" + idPrefix).val(originalVal);
       // alert('after deleting :'+originalVal);
