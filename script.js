@@ -46,10 +46,7 @@ $(function() {
     // console.log(event);
     
     var charCode = (typeof event.which == "number") ? event.charCode : event.keyCode;
-    if(event.which == 229) {
-    charCode = $(this).val().charCodeAt($(this).val().length-1);
-      alert(charCode);
-    }
+    
     // Allow non-printable keys
     if (!charCode || charCode == 8 /* Backspace */ ) {
       //alert('backspace charCode:' + charCode);
@@ -75,6 +72,17 @@ $(function() {
       $("#" + idPrefix).val(originalVal);
       // alert('after deleting :'+originalVal);
       oldLength = newVal.length;
+    }
+    if(event.which == 229) {
+      if(actualLength-newLength ==1){
+      originalVal = originalVal.slice(0, originalVal.length - 1);
+      $("#" + idPrefix).val(originalVal);
+      // alert('after deleting :'+originalVal);
+      oldLength = newVal.length;
+      }
+      }
+    charCode = $(this).val().charCodeAt($(this).val().length-1);
+      alert(charCode);
     }
     //alert('current val: '+$("#" + idPrefix).val());
   });
