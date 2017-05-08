@@ -41,7 +41,7 @@ $(function() {
   });
 
   $("#hiddenInput").off().on('keyup', function(event) {
-    alert("keyCode: " + event.which + " ,charCode: "+event.charCode);
+    alert(" event.which: " + event.which + " ,charCode: "+event.charCode + " event.keycode: "+event.keyCode);
   //  alert("c: " +event.charCode);
     // console.log(event);
     
