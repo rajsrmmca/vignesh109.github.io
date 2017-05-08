@@ -73,14 +73,14 @@ $(function() {
       // alert('after deleting :'+originalVal);
       oldLength = newVal.length;
     }
-    if(event.which == 229) {
+  /*  if(event.which == 229) {
       if(actualLength-newLength ==1){
       originalVal = originalVal.slice(0, originalVal.length - 1);
       $("#" + idPrefix).val(originalVal);
       // alert('after deleting :'+originalVal);
       oldLength = newVal.length;
       }
-      }
+      }  */
     charCode = $(this).val().charCodeAt($(this).val().length-1);
       alert(charCode);
     
