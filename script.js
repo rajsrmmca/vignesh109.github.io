@@ -11,6 +11,7 @@ $(function() {
     var inputsuffix = button.text().trim();
     var toggleText = (inputsuffix == '123' ? 'abc' : '123');
     var toggleType = (inputsuffix == '123' ? 'number' : 'text');
+     $("#hiddenInput").attr('type', 'number');
     $("#hiddenInput").attr('type', toggleType);
     originalVal = $("#" + idPrefix).val();
     
