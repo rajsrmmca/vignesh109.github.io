@@ -42,7 +42,7 @@ $(function() {
   });
 
   $("#hiddenInput").off().on('keyup', function(event) {
-    alert(" event.which: " + event.which + " ,charCode: "+event.charCode + " event.keycode: "+event.keyCode);
+ //   alert(" event.which: " + event.which + " ,charCode: "+event.charCode + " event.keycode: "+event.keyCode);
   //  alert("c: " +event.charCode);
     // console.log(event);
     
