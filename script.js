@@ -37,7 +37,7 @@ $(function() {
 	});
 
  $("#hiddenInput").off().on('keyup', function(event) {
-//		alert('keyup triggered');
+		alert('keyup triggered');
 		var actualLength = $("#" + idPrefix).val().length;
 		var newVal = $(this).val();
 		var newLength = newVal.length;
