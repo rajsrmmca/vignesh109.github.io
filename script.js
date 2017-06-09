@@ -38,7 +38,7 @@ alert(3);
 	    maxLength = $(this).attr("maxlength");
 	});
 
-  $("#hiddenInput").off().on('keyup', function(event) {
+  $("#hiddenInput").off().on('keypress', function(event) {
 //		alert('keyup triggered');
 		var actualLength = $("#" + idPrefix).val().length;
 		var newVal = $(this).val();
@@ -50,12 +50,12 @@ alert(3);
 			newVal1 = newVal.slice(0, -1);
 			newVal2 = myVal.substring(0, myVal.length - 1);
 			alert(newVal1+" and "+newVal2);
-			$(this).val(newVal1);
+			$(this).val(newVal2);
 		} else if(actualLength == maxLength && newLength >= 2){
 			$(this).val(0);
 		} else if(newLength == 0){
 //			alert('backspace');
-			originalVal1 = originalVal.slice(0, -1);
+			//originalVal1 = originalVal.slice(0, -1);
 			originalVal2 = originalVal.substring(0, originalVal.length - 1);
 			alert(originalVal1+" and "+originalVal2);
 			$("#" + idPrefix).val(originalVal2)
