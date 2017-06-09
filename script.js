@@ -1,6 +1,6 @@
 // Add your javascript here
 $(function() {
-
+alert(0);
 
 
 
