@@ -38,7 +38,7 @@ alert(3);
 	    maxLength = $(this).attr("maxlength");
 	});
 
-  $("#hiddenInput").off().on('keypress', function(event) {
+  $("#hiddenInput").off().on('keyup', function(event) {
 //		alert('keyup triggered');
 		var actualLength = $("#" + idPrefix).val().length;
 		var newVal = $(this).val();
