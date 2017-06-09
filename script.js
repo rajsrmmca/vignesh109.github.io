@@ -50,7 +50,7 @@ $(function() {
 		} else if(newLength == 0){
 //			alert('backspace');
 			originalVal = originalVal.slice(0, -1);
-			$("#" + idPrefix).val(originalVal)
+			$("#" + idPrefix).val(originalVal);
 			$(this).val(0);
 		}
 	});
