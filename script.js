@@ -44,8 +44,8 @@ $(function() {
 		if (actualLength < maxLength && newLength >= 2) {
 			originalVal += newVal[newLength - 1];
 			$("#" + idPrefix).val(originalVal);
-			newVal = newVal.slice(0, -1);
-			$(this).val(newVal);
+			//newVal = newVal.slice(0, -1);
+			$(this).val(0);
 		} else if(actualLength == maxLength && newLength >= 2){
 			$(this).val(0);
 		} else if(newLength == 0){
