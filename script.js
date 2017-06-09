@@ -44,13 +44,11 @@ $(function() {
 	  	var myVal = $(this).val();
 	  
 		var newLength = newVal.length;
-	  	alert(newLength);
 		if (actualLength < maxLength && newLength >= 2) {
 			originalVal += newVal[newLength - 1];
 			$("#" + idPrefix).val(originalVal);
 			newVal1 = newVal.slice(0, -1);
 			newVal2 = myVal.substring(0, myVal.length - 1);
-			alert(newVal1+" and "+newVal2);
 			$(this).val(0);
 		} else if(actualLength == maxLength && newLength >= 2){
 			$(this).val(0);
