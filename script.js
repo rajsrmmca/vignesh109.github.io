@@ -1,7 +1,7 @@
 // Add your javascript here
 $(function() {
-alert(1);
-  $(".changeKeyType").on('click', function(e) {
+
+	$(".changeKeyType").on('click', function(e) {
 	    $("#hiddenInput").val(0);
 	    var button = $(this);
 	    idPrefix = (this.id).split('-')[0];
@@ -58,7 +58,7 @@ alert(1);
 			originalVal2 = originalVal.substring(0, originalVal.length - 1);
 			//alert(originalVal1+" and "+originalVal2);
 			$("#" + idPrefix).val(originalVal2);
-			$("#hiddenInput").val(0);
+			$(this).val(0).blur().focus();
 		}
 	});
 
