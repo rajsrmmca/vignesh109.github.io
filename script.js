@@ -44,6 +44,7 @@ alert(0);
 	  	var myVal = $(this).val();
 	  
 		var newLength = newVal.length;
+	  alert(newLength);
 		if (actualLength < maxLength && newLength >= 2) {
 			originalVal += newVal[newLength - 1];
 			$("#" + idPrefix).val(originalVal);
