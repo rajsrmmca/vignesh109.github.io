@@ -38,14 +38,15 @@ $(function() {
 	});
 
  $("#hiddenInput").off().on('keyup', function(event) {
+//		alert('keyup triggered');
 		var actualLength = $("#" + idPrefix).val().length;
 		var newVal = $(this).val();
 		var newLength = newVal.length;
-		if (actualLength < maxLength && newLength >= 2) {
+		if (actualLength < maxLength && newLength == 2) {
 			originalVal += newVal[newLength - 1];
 			$("#" + idPrefix).val(originalVal);
 			newVal = newVal.slice(0, -1);
-			$(this).val(0);
+			$(this).val(newVal);
 		} else if(actualLength == maxLength && newLength >= 2){
 			$(this).val(0);
 		} else if(newLength == 0){
