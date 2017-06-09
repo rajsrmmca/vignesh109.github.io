@@ -47,13 +47,13 @@ alert(1);
 			originalVal += newVal[newLength - 1];
 			$("#" + idPrefix).val(originalVal);
 			//newVal = newVal.slice(0, -1);
-			newVal = newVal.substring(0, newVal.length - 1);
-			$(this).val(newVal);
+			newVal1 = newVal.substring(0, newVal.length - 1);
+			$(this).val(newVal1);
 		} else if(actualLength == maxLength && newLength >= 2){
 			$(this).val(0);
 		} else if(newLength == 0){
 //			alert('backspace');
-			originalVal = originalVal.slice(0, -1);
+			//originalVal = originalVal.slice(0, -1);
 			originalVal = originalVal.substring(0, originalVal.length - 1);
 			$("#" + idPrefix).val(originalVal)
 			$(this).val(0);
