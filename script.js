@@ -1,6 +1,5 @@
 // Add your javascript here
 $(function() {
-	alert(1);
 	$(".changeKeyType").on('click', function(e) {
 	    $("#hiddenInput").val(0);
 	    var button = $(this);
@@ -44,8 +43,8 @@ $(function() {
 		if (actualLength < maxLength && newLength == 2) {
 			originalVal += newVal[newLength - 1];
 			$("#" + idPrefix).val(originalVal);
-			//newVal = newVal.slice(0, -1);
-			$(this).val(0);
+			newVal = newVal.slice(0, -1);
+			$(this).val(newVal);
 		} else if(actualLength == maxLength && newLength >= 2){
 			$(this).val(0);
 		} else if(newLength == 0){
