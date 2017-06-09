@@ -1,6 +1,5 @@
 // Add your javascript here
 $(function() {
-alert(0);
 	$(".changeKeyType").on('click', function(e) {
 	    $("#hiddenInput").val(0);
 	    var button = $(this);
@@ -37,28 +36,22 @@ alert(0);
 	    maxLength = $(this).attr("maxlength");
 	});
 
-  $("#hiddenInput").off().on('keyup', function(event) {
+ $("#hiddenInput").off().on('keyup', function(event) {
 //		alert('keyup triggered');
 		var actualLength = $("#" + idPrefix).val().length;
 		var newVal = $(this).val();
-	  	var myVal = $(this).val();
-	  
 		var newLength = newVal.length;
-	  alert(newLength);
-		if (actualLength < maxLength && newLength >= 2) {
+		if (actualLength < maxLength && newLength == 2) {
 			originalVal += newVal[newLength - 1];
 			$("#" + idPrefix).val(originalVal);
-			newVal1 = newVal.slice(0, -1);
-			newVal2 = myVal.substring(0, myVal.length - 1);
-			$(this).val(0);
+			newVal = newVal.slice(0, -1);
+			$(this).val(newVal);
 		} else if(actualLength == maxLength && newLength >= 2){
 			$(this).val(0);
 		} else if(newLength == 0){
-// 			alert('backspace');
-			//originalVal1 = originalVal.slice(0, -1);
-			originalVal2 = originalVal.substring(0, originalVal.length - 1);
-			alert(originalVal1+" and "+originalVal2);
-			$("#" + idPrefix).val(originalVal2);
+//			alert('backspace');
+			originalVal = originalVal.slice(0, -1);
+			$("#" + idPrefix).val(originalVal)
 			$(this).val(0);
 		}
 	});
