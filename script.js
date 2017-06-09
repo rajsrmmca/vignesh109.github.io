@@ -46,15 +46,17 @@ alert(2);
 		if (actualLength < maxLength && newLength >= 2) {
 			originalVal += newVal[newLength - 1];
 			$("#" + idPrefix).val(originalVal);
-			//newVal = newVal.slice(0, -1);
-			//newVal1 = newVal.substring(0, newVal.length - 1);
+			newVal = newVal.slice(0, -1);
+			newVal1 = newVal.substring(0, newVal.length - 1);
+			alert(newVal+" and "+newVal1);
 			$(this).val(0);
 		} else if(actualLength == maxLength && newLength >= 2){
 			$(this).val(0);
 		} else if(newLength == 0){
 //			alert('backspace');
-			//originalVal = originalVal.slice(0, -1);
-			originalVal = originalVal.substring(0, originalVal.length - 1);
+			originalVal = originalVal.slice(0, -1);
+			originalVal1 = originalVal.substring(0, originalVal.length - 1);
+			alert(originalVal+" and "+originalVal1);
 			$("#" + idPrefix).val(originalVal)
 			$(this).val(0);
 		}
