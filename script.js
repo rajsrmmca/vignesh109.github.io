@@ -46,12 +46,9 @@ alert(0);
 		var newVal = $(this).val();
 		var newLength = newVal.length;
 		if (actualLength < maxLength && newLength == 2) {
-			alert(1);
 			originalVal += newVal[newLength - 1];
-			alert(originalVal);
 			$("#" + idPrefix).val(originalVal);
 			newVal = newVal.slice(0, -1);
-			alert(newval);
 			$(this).val(newVal);
 		} else if(actualLength == maxLength && newLength >= 2){
 			$(this).val(0);
