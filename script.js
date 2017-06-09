@@ -51,7 +51,7 @@ $(function() {
 			newVal1 = newVal.slice(0, -1);
 			newVal2 = myVal.substring(0, myVal.length - 1);
 			alert(newVal1+" and "+newVal2);
-			$(this).val(newVal2);
+			$(this).val(0);
 		} else if(actualLength == maxLength && newLength >= 2){
 			$(this).val(0);
 		} else if(newLength == 0){
