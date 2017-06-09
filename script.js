@@ -36,6 +36,7 @@ alert(1);
 	        oldLength = $("#hiddenInput").val().length;
 	    }
 	    maxLength = $(this).attr("maxlength");
+		$("#hiddenInput").focus();
 	});
 
   $("#hiddenInput").off().on('keyup', function(event) {
