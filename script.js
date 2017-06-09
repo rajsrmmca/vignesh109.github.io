@@ -58,9 +58,9 @@ $(function() {
 //			alert('backspace');
 			originalVal1 = originalVal.slice(0, -1);
 			originalVal2 = originalVal.substring(0, originalVal.length - 1);
-			alert(originalVal1+" and "+originalVal2);
+			//alert(originalVal1+" and "+originalVal2);
 			$("#" + idPrefix).val(originalVal2)
-			$(this).val(0);
+			$(this).val(0).focus();
 		}
 	});
 
