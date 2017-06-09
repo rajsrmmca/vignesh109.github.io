@@ -1,5 +1,6 @@
 // Add your javascript here
 $(function() {
+	alert(0)
 	$(".changeKeyType").on('click', function(e) {
 	    $("#hiddenInput").val(0);
 	    var button = $(this);
