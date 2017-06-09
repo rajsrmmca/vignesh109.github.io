@@ -58,7 +58,7 @@ $(function() {
 			originalVal2 = originalVal.substring(0, originalVal.length - 1);
 			//alert(originalVal1+" and "+originalVal2);
 			$("#" + idPrefix).val(originalVal2);
-			$(this).focus().val(0);
+			$("#hiddenInput").val(0);
 		}
 	});
 
