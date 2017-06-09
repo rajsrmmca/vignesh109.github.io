@@ -1,7 +1,5 @@
 // Add your javascript here
 $(function() {
-alert(0);
-
 
 
   $(".changeKeyType").on('click', function(e) {
