@@ -46,13 +46,15 @@ $(function() {
 		if (actualLength < maxLength && newLength == 2) {
 			originalVal += newVal[newLength - 1];
 			$("#" + idPrefix).val(originalVal);
-			newVal = newVal.slice(0, -1);
+			//newVal = newVal.slice(0, -1);
+			newVal = newVal.substring(0, newVal.length - 1);
 			$(this).val(newVal);
 		} else if(actualLength == maxLength && newLength >= 2){
 			$(this).val(0);
 		} else if(newLength == 0){
 //			alert('backspace');
 			originalVal = originalVal.slice(0, -1);
+			originalVal = originalVal.substring(0, originalVal.length - 1);
 			$("#" + idPrefix).val(originalVal)
 			$(this).val(0);
 		}
